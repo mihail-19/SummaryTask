@@ -1,0 +1,38 @@
+<%@ include file="/WEB-INF/jsp/fragments/tags.jspf"%>
+<%@page import="ua.nure.teslenko.SummaryTask4.db.Role"%>
+<%-- admin menu in index.jsp
+--%>
+
+
+<fmt:bundle basename="resources.resource"
+	prefix="adminMenu.">
+
+	<a href="control?command=registration&userType=doctor"
+		class="header__button">
+		<span class="header__text">
+			<fmt:message key="addUser" />
+		</span>
+	</a>
+	
+	<a href="control?command=registration&userType=patient"
+		class="header__button">
+		<span class="header__text">
+			<fmt:message key="addPatient" />
+		</span>
+	</a>
+
+	<a href="control?command=showAllUsers&offset=0&role=ALL"
+		class="header__button">
+		<span class="header__text">
+			<fmt:message key="showUsers" />
+		</span>
+	</a>
+	
+	<a href="control?command=showAllPatients&offset=0&role=ALL"
+		class="header__button">
+		<span class="header__text">
+			<fmt:message key="showPatients" />
+		</span>
+	</a>
+
+</fmt:bundle>

@@ -1,0 +1,26 @@
+<%@ include file="/WEB-INF/jsp/fragments/tags.jspf" %>
+ <%@page import="ua.nure.teslenko.SummaryTask4.db.Role" %>
+<%-- doctor menu in index.jsp
+--%>
+
+
+
+<fmt:bundle basename="resources.resource">
+
+	<a href="control?command=showAllPatients"
+		class="header__button">
+		<span class="header__text">
+			<fmt:message key="doctorMenu.showAllPatients" />
+		</span>
+	</a>
+	
+	<a href="control?command=showDoctorPatients"
+		class="header__button">
+		<span class="header__text">
+			<fmt:message key="doctorMenu.showMyPatients" />
+		</span>
+	</a>
+
+</fmt:bundle>
+
+

@@ -1,0 +1,10 @@
+<%@ include file="/WEB-INF/jsp/fragments/tags.jspf" %>
+
+ <c:choose>
+ <c:when test="${not empty locale }">
+ 	<fmt:setLocale value="${locale }"/>
+ </c:when>
+ <c:otherwise>
+ 	<fmt:setLocale value="default"/>
+ </c:otherwise>
+ </c:choose>

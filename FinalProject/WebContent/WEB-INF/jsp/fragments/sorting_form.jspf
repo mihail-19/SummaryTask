@@ -1,0 +1,46 @@
+<%@ include file="/WEB-INF/jsp/fragments/tags.jspf"%>
+<div class="sorting-form">
+<fmt:bundle basename="resources.resource">
+	<input type="hidden" name="offset" value="0">
+	<fmt:message key="sort.sort" />
+	<select name="sort">
+		<option selected value="${sort}"><fmt:message
+				key="userData.${sort}" /></option>
+		<option value="${Sort.lastName}"><fmt:message
+				key="userData.lastName" /></option>
+		<option value="${Sort.dateOfBirth}"><fmt:message
+				key="userData.dateOfBirth" /></option>
+		<c:choose>
+			<c:when test="${role eq 'ALL' }">
+				<option value="${Sort.roleID}"><fmt:message
+						key="userData.roleID" /></option>
+			</c:when>
+			<c:when test="${role eq Role.DOCTOR.toString() }">
+				<option value="${Sort.category}"><fmt:message
+						key="userData.category" /></option>
+				<option value="${Sort.numberOfPatients}"><fmt:message
+						key="userData.numberOfPatients" /></option>
+			</c:when>
+		</c:choose>
+	</select>
+	<fmt:message key="sort.limit" />
+	<select name="limit">
+		<option selected value="${limit}"><c:out value="${limit}" /></option>
+		<option value="3">3</option>
+		<option value="5">5</option>
+		<option value="10">10</option>
+		<option value="15">15</option>
+		<option value="30">30</option>
+	</select>
+	<fmt:message key="sort.roleFilter" />
+	<select name="role">
+		<option selected value="${role}"><fmt:message
+				key="role.${role}" /></option>
+		<option value="ALL"><fmt:message key="role.ALL" /></option>
+		<option value="${Role.ADMIN}"><fmt:message key="role.ADMIN" /></option>
+		<option value="${Role.DOCTOR}"><fmt:message key="role.DOCTOR" /></option>
+		<option value="${Role.NURSE}"><fmt:message key="role.NURSE" /></option>
+	</select>
+	<input type="submit" value="<fmt:message key="sort.submit"/>">
+</fmt:bundle>
+</div>

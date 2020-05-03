@@ -1,0 +1,81 @@
+
+<%@ include file="/WEB-INF/jsp/fragments/tags.jspf" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%-- Main header block
+--%>
+
+<%@ include file="/WEB-INF/jsp/fragments/chooseLocale.jspf"%>
+ <c:set var="limt" value="10"/>
+ <div class="wrap">
+ 
+	<div class="header">
+	<fmt:bundle basename="resources.resource">
+	
+		<div class="header__menu">
+		
+		
+		
+		
+		<c:if test="${not empty authorizedUser }">
+			
+			
+			<c:choose>
+				<c:when test="${authorizedUser.role eq Role.ADMIN }">
+					<%@ include file="/WEB-INF/jsp/fragments/adminMenu.jspf"%>
+				</c:when>
+				<c:when test="${authorizedUser.role eq Role.DOCTOR }">
+					<%@ include file="/WEB-INF/jsp/fragments/doctorMenu.jspf"%>
+				</c:when>
+
+				<c:when test="${authorizedUser.role eq Role.NURSE }">
+					<%@ include file="/WEB-INF/jsp/fragments/nurseMenu.jspf"%>
+				</c:when>
+			</c:choose>
+			
+				<a href="/FinalProject" class="header__button">
+					<span class="header__text">
+						<fmt:message key="header.homePage" />
+					</span>
+				</a>
+
+		</c:if>
+		</div>
+		
+		<div class="header__login">
+		<div class="header__choose-language">
+			<div class="header__language-msg"><fmt:message key="header.chooseLanguage"/>: </div>
+			<a href="control?command=setLocale&locale=en" class="header__language-button">eng</a>
+			<a href="control?command=setLocale&locale=ru" class="header__language-button">рус</a>
+		</div>
+		<c:if test="${not empty authorizedUser }">
+			<div class="header__login-text">
+				<div><c:out value="${authorizedUser.login }" />,</div>
+				<div> <fmt:message key="role.${authorizedUser.role }" /></div>
+			</div>
+		</c:if>
+		<c:choose>
+			<c:when test="${empty authorizedUser }">
+				
+					<a href="control?command=login" class="header__button">
+						<span class="header__text">
+							<fmt:message
+							key="header.authorize" />
+						</span>		
+					</a>
+			
+			</c:when>
+			<c:otherwise>
+				
+					<a href="control?command=logout" class="header__button">
+						<span class="header__text">
+							<fmt:message
+							key="header.logout" />
+						</span>
+					</a>
+			
+			</c:otherwise>
+		</c:choose>
+		</div>
+	</fmt:bundle>
+	</div>
+</div>

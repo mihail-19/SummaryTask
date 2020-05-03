@@ -1,0 +1,434 @@
+@charset "UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	moz-box-sizing: border-box;
+	webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	ms-text-size-adjust: 100%;
+	moz-text-size-adjust: 100%;
+	webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input:-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-mox-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none}
+ul li{list-style: none;}
+img{vertical-align: : top;}
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+	display: flex;
+	justify-content: space-between;
+  flex-shrink: 0;
+	padding: 4px 20px 4px 20px;
+  font-size: 14px;
+  background: #D5DAE9;
+}
+
+
+
+
+
+
+.wrap{
+
+	background: linear-gradient(45deg, #A5DDE8, #D5DAE9);
+	height:80px;
+	padding: 20px 10px 5px 15px;
+}
+
+.header{
+
+	display: flex;
+	height: 40px;
+	justify-content: space-between; 
+}
+.header__menu{
+	display: flex;
+	flex-basis: 500px;
+}
+.header__login{
+	display: flex;
+	justify-content: flex-end;
+	flex-basis: 400px;
+}
+
+.header__button {
+	display: flex;
+	border: solid 1px;
+	flex-basis: 100px;
+	flex-direction: column;
+	justify-content: center;
+	color: #777674;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 5px;
+	text-shadow: rgba(255, 255, 255, .5) 1px 1px, rgba(100, 100, 100, .3)
+		1px 3px 2px;
+	user-select: none;
+	padding: 5px;
+	outline: none;
+	border-radius: 3px/100%;
+	background-image: linear-gradient(45deg, rgba(200, 200, 200, .0) 50%,
+		rgba(200, 200, 200, .8), rgba(255, 255, 255, .0) 70%),
+		linear-gradient(to right, rgba(200, 200, 200, 1),
+		rgba(200, 200, 200, 0) 20%, rgba(255, 255, 255, 0) 90%,
+		rgba(255, 255, 255, .3)),
+		linear-gradient(to right, rgba(223, 190, 170, 1),
+		rgba(255, 255, 255, .9) 45%, rgba(223, 190, 170, .5));
+	background-image: linear-gradient(45deg, rgba(200, 200, 200, .0) 50%,
+		rgba(200, 200, 200, .8), rgba(255, 255, 255, .0) 70%),
+		linear-gradient(to right, rgba(200, 200, 200, 1),
+		rgba(200, 200, 200, 0) 20%, rgba(255, 255, 255, 0) 90%,
+		rgba(255, 255, 255, .3)),
+		linear-gradient(to right, rgba(223, 190, 170, 1),
+		rgba(255, 255, 255, .9) 45%, rgba(223, 190, 170, .5));
+	background-repeat: no-repeat;
+	background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+	background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+	box-shadow: rgba(0, 0, 0, .5) 3px 10px 10px -10px;
+	border-radius: 5px;
+}
+
+.header__button:hover {
+	color: black;
+ 
+  background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+  }
+  .header__button:active {
+  top: 1px;
+}
+.header__text{
+	text-align: center;
+}
+.header__choose-language{
+	display: flex;
+	flex-basis: 100px;
+	border: ridge 1px grey;
+	padding: 9px 5px 0px 5px;
+	margin-right: 15px;
+	 -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.header__language-msg{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-basis:  30px;
+	height:20px;
+}
+.header__language-button{
+	padding: 2px;
+	margin-left: 5px;
+	display: flex;
+	border: ridge 1px;
+	flex-basis:  35px;
+	height:20px;
+	font-weight: bold;
+  	text-decoration: none;
+  	 color: #777674;
+  	 border-color: #777674;
+}
+.header__login-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height:40px;
+	padding: 10px;
+	font-style: italic;
+}
+
+
+table.users-list-table {
+border-spacing: 0 3px;
+font-family: 'Open Sans', sans-serif;
+font-weight: bold;
+margin: auto;
+word-break: break-all;
+}
+th.users-list-table {
+	cursor: default;
+	height:35px;
+padding: 1px 3px;
+background: #D5DAE9;
+color: black;
+border-right: 2px solid; 
+font-size: 0.9em;
+}
+th.users-list-table:last-child{
+	border-right:none;
+}
+tr.users-list-table{
+	color:#3F3F3F;
+	cursor: pointer;
+}
+td.users-list-table {
+
+vertical-align: middle;
+padding: 8px 3px 8px 3px;
+font-size: 14px;
+text-align: center;
+border-top: 2px solid #56433D;
+border-bottom: 2px solid #56433D;
+
+border-left: 1px solid #56433D;
+}
+td.users-list-table:first-child {
+border-left: 2px solid #56433D;
+
+}
+td.users-list-table:last-child{
+	border-right: 2px solid #56433D;
+}
+tr.users-list-table:hover{
+	color:#D5DAE9;
+	
+}
+
+
+table.user-doctors-table{
+	border-spacing: 0 3px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	margin: auto;
+	word-break: break-all;
+}
+th.user-doctors-table{
+	color: black;
+	padding: 1px 3px;
+	cursor:default;
+}
+td.user-doctors-table {
+
+vertical-align: middle;
+padding: 5px;
+font-size: 12px;
+text-align: center;
+border: 1px solid #56433D;
+
+}
+td.user-doctors-table__del{
+	font-size: 12px;
+	font-weight: normal;
+ 	padding:2px 3px 1px 2px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+td.user-doctors-table__del:hover{
+	cursor: pointer;
+	color:#D5DAE9;
+}
+
+td.presc-executed{
+	color:#D5DAE9;
+	border: grey;
+}
+td.presc-description{
+	max-width: 300px;
+}
+td.resc-button{
+	border:none;
+	font-weight: normal;
+	padding: 5px;
+}
+.button{
+	display: inline-block;
+	height: 24px;
+	padding: 5px; 
+	background: #ccc; 
+    color: black;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+.button:hover{
+	cursor: pointer;
+	color:#D5DAE9;
+}
+
+.admin-action{
+	margin-top: 10px;
+	text-align: center;
+	height: 35px;
+	width:400px;
+	display: flex;
+	justify-content: flex-start;
+}
+.admin-action__button{
+ 	margin-right: 15px;
+}
+
+
+.user-menu{
+	display: flex;
+	max-width:1000px;
+	min-width: 400px;
+	padding: 50px 20px 20px 50px;
+}
+.sorting-form{
+	height: 40px;
+	padding: 5px 5px 10px 5px;
+}
+.user-list{
+	display:flex;
+}
+
+.register-page__container{
+	text-align: center;
+	padding: 10px;
+	margin: auto;
+	width: 300px;
+	
+	
+}
+.register-page__title{
+	text-align: center;
+	padding: 20px;
+	font-weight: bold;
+	font-size: 20px;
+}
+.register-page__form{
+	padding-top:10px;
+	border: ridge thin #D5DAE9;
+	margin:auto;
+	height: 350px;
+	-webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+.register-page__field{
+	padding-bottom: 4px;
+	text-align: center;
+}
+.register-page__input-text{
+	text-align: center;
+}
+.register-page__error-msg{
+	text-align: center;
+	color: red;
+	font-size: 12px;
+}
+
+.login-page__form{
+	height: 150px;
+}
+
+.sort{
+	text-align: left;
+}
+
+
+
+.diagnose{
+	width: 400px;
+	overflow: hidden;
+	background: #D5DAE9;
+	padding: 10px;
+	border: ridge thin;
+	-webkit-border-radius: 3px;
+    border-radius: 3px; 
+    color: #3C272F;
+}
+
+
+input{
+	border:solid 1px;
+}
+textarea {
+	border: solid 1px;
+	height: 100px;
+	width:300px;
+}
+input[type=submit] {
+   height: 24px;
+	padding: 5px; 
+	background: #ccc; 
+    color: black;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+input[type=submit]:hover{
+	cursor: pointer;
+	color:#D5DAE9; 
+}
+
+.page-navigation{
+	display:flex;
+	justify-content: space-between; 
+}
+.page-navigation__button{
+	border: solid 1px;
+	border-color: #A5DDE8;
+}
+.page-navigation__button:hover{
+	background-color: #A5DDE8;
+	cursor:pointer;
+}
+.patient-list-container{
+	display: flex;
+	justify-content: flex-start; 
+	padding: 10px;
+}
+.patient-list{
+}
+.doctor-menu{
+	border: ridge 1px grey;
+	max-width:1000px;
+	min-width: 400px;
+	padding: 15px 20px 20px 50px;
+	margin-left: 50px;
+	-webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+.doctor-menu__action{
+	padding: 10px 10px 10px 0px;
+}
+.doctor-menu__data-container{
+	padding: 5px;
+}
+.doctor-menu__data{
+	padding: 4px 4px 4px 0px;
+}
+.users-list{
+	display:flex;
+	justify-content: flex-start;
+}
+.users-list__data{
+	padding:10px;
+	min-width: 600px;
+}
+.patient-menu-form{
+	display: none;
+}
+
