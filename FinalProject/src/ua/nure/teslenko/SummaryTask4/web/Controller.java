@@ -57,7 +57,9 @@ public class Controller extends HttpServlet {
 				request.setAttribute("errorMessage", e.getMessage());
 				e.printStackTrace();
 			}
-			request.getRequestDispatcher(forward).forward(request, response);
+			if(!commandName.equals("download")) {
+				request.getRequestDispatcher(forward).forward(request, response);
+			}
 		}
 	}
 

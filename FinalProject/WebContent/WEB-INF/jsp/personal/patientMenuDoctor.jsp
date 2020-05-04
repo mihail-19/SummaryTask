@@ -21,7 +21,7 @@
 
 	
 	<c:if test="${patient.isActive eq false}">
-							<a href="download?patientId=${patient.id }">
+							<a href="control?command=download&patientId=${patient.id }">
 								<span class="admin-action__button  button">
 									<fmt:message key="userMenu.downloadPatientInfo" />
 								</span>

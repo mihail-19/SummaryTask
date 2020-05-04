@@ -35,7 +35,7 @@
 		</init-param>
 		<init-param>
 			<param-name>common</param-name>
-			<param-value>logout showAllPatients patientMenuDoctor </param-value>
+			<param-value>logout showAllPatients patientMenuDoctor download</param-value>
 		</init-param>
 		<init-param>
 			<param-name>out-of-control</param-name>

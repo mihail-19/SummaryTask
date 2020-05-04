@@ -67,7 +67,10 @@ public class CommandContainer {
 		//common
 		commands.put("setLocale", new CommandSetLocale());
 		
-	
+		
+		commands.put("download", new CommandDownload());
+		
+		
 		
 		
 	}

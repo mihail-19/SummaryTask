@@ -61,7 +61,7 @@
 							<td class="users-list-table"><c:out value="${patient.firstName }" /></td>
 							<td class="users-list-table"><c:out value="${patient.lastName }" /></td>
 							<td class="users-list-table"><c:out value="${patient.dateOfBirth }" /></td>
-							<td class="users-list-table"><c:out value="${patient.isActive }" /></td>
+							<td class="users-list-table"><fmt:message key="userMenu.${patient.isActive }"/></td>
 						</tr>
 
 					</c:forEach>
